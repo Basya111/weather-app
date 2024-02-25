@@ -9,8 +9,6 @@ export const Home = () => {
   const url = `https://api.openweathermap.org/data/2.5/weather?lat=${location?.lat}&lon=${location?.lon}&appid=248d2efb006413b786b246d1276a3dd9`;
 
   const [isLoading, data, error] = useFetchApi(url, location);
-  console.log(data);
-
   const image = getWeatherIcon(data?.main);
 
   return (

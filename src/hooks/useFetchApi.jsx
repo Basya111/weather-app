@@ -13,7 +13,6 @@ export const useFetchApi = (url, props) => {
         let response = await fetch(url, {
           method: "GET",
         });
-        console.log("response", response);
         if (response.status === 200) {
           const data = await response.json();
           setData(data);
