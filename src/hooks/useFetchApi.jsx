@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export const useFetchApi = (url) => {
+export const useFetchApi = (url, props) => {
   const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
@@ -28,7 +28,7 @@ export const useFetchApi = (url) => {
     };
 
     fetchData(url);
-  }, []);
+  }, [props]);
 
   return [isLoading, data, error];
 };
